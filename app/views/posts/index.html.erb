@@ -1,0 +1,7 @@
+<br>
+<% @posts.each do |post| %>
+<h2 class="card-title text-primary mb-2"><%= link_to "#{post.title}", post %></h2>
+<small>Created At <%= time_ago_in_words(post.created_at) %> ago</small>
+<p class="card-text mt-3"><%= truncate(post.content, length: 200) %></p>
+<hr>
+<% end %>
